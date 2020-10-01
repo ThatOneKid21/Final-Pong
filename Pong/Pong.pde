@@ -1,6 +1,6 @@
 //Global Variables
-Paddle paddleLeft;
-Paddle paddleRight;
+private Paddle paddleLeft;
+private Paddle paddleRight;
 Ball ball;
 public boolean paused = false;
 public boolean cheat = false;
@@ -9,12 +9,12 @@ public boolean screen = true;
 public PFont f;
 
 public void setup() {
+  fullScreen();
   ball = new Ball(width/2, height/2, 50);
   ball.speedX = 13;
   ball.speedY = random(-3,3);
   paddleLeft = new Paddle(15, height/2, 30,200);
   paddleRight = new Paddle(width-15, height/2, 30,200);
-  size(500, 300);
   printArray(PFont.list());
   f = createFont("OCR A Extended", 285);
   textFont(f);
