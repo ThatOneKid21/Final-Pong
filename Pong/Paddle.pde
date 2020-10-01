@@ -1,12 +1,12 @@
-class Paddle{
+public class Paddle{
 
-  float x;
-  float y;
-  float w;
-  float h;
-  float speedY;
-  float speedX;
-  color c;
+ private float x;
+ private float y;
+ private float w;
+ private float h;
+ private float speedY;
+ private float speedX;
+ private color c;
   
   Paddle(float tempX, float tempY, float tempW, float tempH){
     x = tempX;
@@ -18,12 +18,12 @@ class Paddle{
     c=(255);
   }
 
-  void move(){
+   private void move(){
     y += speedY;
     x += speedX;
   }
 
-  void display(){
+   private void display(){
     fill(c);
     rect(x-w/2,y-h/2,w,h);
   } 

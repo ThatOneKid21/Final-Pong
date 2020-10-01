@@ -1,13 +1,13 @@
-class Ball {
-  float x;
-  float y;
-  float speedX;
-  float speedY;
-  float diameter;
-  color c;
+public class Ball {
+  private float x;
+  private float y;
+  private float speedX;
+  private float speedY;
+  private float diameter;
+  private color c;
   
   // Constructor method
-  Ball(float tempX, float tempY, float tempDiameter) {
+  public Ball(float tempX, float tempY, float tempDiameter) {
     x = tempX;
     y = tempY;
     diameter = tempDiameter;
@@ -16,7 +16,7 @@ class Ball {
     c = (225); 
   }
   
-  void move() {
+  private void move() {
     // Add speed to location
     y = y + speedY;
     x = x + speedX;
@@ -25,7 +25,7 @@ class Ball {
     }
   }
   
-  void display() {
+  private void display() {
     fill(c);
     ellipse(x,y,diameter,diameter);
   }
@@ -44,8 +44,6 @@ class Ball {
     return y+diameter/2;
   }
 }
-
-
 
 void screenChecker () {
 if (width<height) { 

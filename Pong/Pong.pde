@@ -2,25 +2,26 @@
 Paddle paddleLeft;
 Paddle paddleRight;
 Ball ball;
-boolean paused = false;
-boolean cheat = false;
-boolean Menu = false;
-PFont f;
+public boolean paused = false;
+public boolean cheat = false;
+public boolean Menu = false;
+public boolean screen = true;
+public PFont f;
 
-void setup() {
+public void setup() {
   ball = new Ball(width/2, height/2, 50);
-  ball.speedX = 5;
+  ball.speedX = 13;
   ball.speedY = random(-3,3);
   paddleLeft = new Paddle(15, height/2, 30,200);
   paddleRight = new Paddle(width-15, height/2, 30,200);
   size(500, 300);
   printArray(PFont.list());
-  f = createFont("Comic Sans MS", 100);
+  f = createFont("OCR A Extended", 285);
   textFont(f);
 }
 
 
-void draw() {
+public void draw() {
   background(0);
   //Menu();
   ball.move();
@@ -35,18 +36,18 @@ void draw() {
   scoreboard();
   }
   
-void keyPressed () {
+public void keyPressed () {
   if(keyCode == UP){
-    paddleRight.speedY=-3;
+    paddleRight.speedY=-7;
   }
   if(keyCode == DOWN){
-    paddleRight.speedY=3;
+    paddleRight.speedY=7;
   }
   if(key == 'w'){
-    paddleLeft.speedY=-3;
+    paddleLeft.speedY=-7;
   }
   if(key == 's'){
-    paddleLeft.speedY=3;
+    paddleLeft.speedY=7;
   }
   if(key == 'm') {
     //Menu();
@@ -63,7 +64,7 @@ void keyPressed () {
   paused();
 }
 
-void keyReleased(){
+public void keyReleased(){
   if(keyCode == UP){
     paddleRight.speedY=0;
   }
@@ -76,9 +77,9 @@ void keyReleased(){
   if(key == 's'){
     paddleLeft.speedY=0;
   }
-  if(key == 'p'){
-  paused = false;
-  }
 }
 void mousePressed () {
+  if (mousePressed == true) {
+  screen = false;
+  }
 }

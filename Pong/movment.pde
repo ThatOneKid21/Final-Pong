@@ -1,4 +1,4 @@
-void ball_movment() {
+ private void ball_movment() {
   if (ball.right() > width) { //if stuff between () is true, execute code between {}
     ball.speedX = -ball.speedX;
   }
@@ -15,7 +15,7 @@ void ball_movment() {
   }
  }
 
-void paddle_movment() {
+ private void paddle_movment() {
   if (paddleLeft.bottom() > height) {
     paddleLeft.y = height-paddleLeft.h/2;
   }
@@ -33,7 +33,7 @@ void paddle_movment() {
   }
 }
 
-void collision() {
+ private void collision() {
   if ( ball.left() < paddleLeft.right() && ball.y > paddleLeft.top() && ball.y < paddleLeft.bottom()){
     ball.speedX = -ball.speedX;
     ball.speedY = map(ball.y - paddleLeft.y, -paddleLeft.h/2, paddleLeft.h/2, -10, 10);

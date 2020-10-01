@@ -35,7 +35,7 @@ void scoreboard() {
   textAlign(CENTER, CENTER);
   textFont(f, 55);
   fill(random(225), random(225), random(225));
-  text("player1 Wins", 0, 0, 1366, 768);
+  text("Player1 Wins", 0, 0, 1366, 768);
   noLoop();
   }
 }
