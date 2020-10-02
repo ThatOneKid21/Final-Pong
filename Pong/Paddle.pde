@@ -2,11 +2,11 @@ public class Paddle{
 
  private float x;
  private float y;
- private float w;
- private float h;
+ final private float w;
+ final private float h;
  private float speedY;
  private float speedX;
- private color c;
+ final private color c;
   
   Paddle(float tempX, float tempY, float tempW, float tempH){
     x = tempX;

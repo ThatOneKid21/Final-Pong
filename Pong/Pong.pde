@@ -1,11 +1,12 @@
 //Global Variables
 private Paddle paddleLeft;
 private Paddle paddleRight;
-Ball ball;
+private Ball ball;
 public boolean paused = false;
 public boolean cheat = false;
 public boolean Menu = false;
 public boolean screen = true;
+public boolean DarkMode = false;
 public PFont f;
 
 public void setup() {
@@ -23,7 +24,6 @@ public void setup() {
 
 public void draw() {
   background(0);
-  //Menu();
   ball.move();
   ball.display();
   ball_movment();
@@ -34,6 +34,7 @@ public void draw() {
   paddleRight.move();
   paddleRight.display();
   scoreboard();
+  StartScreen();
   }
   
 public void keyPressed () {
@@ -80,6 +81,7 @@ public void keyReleased(){
 }
 void mousePressed () {
   if (mousePressed == true) {
-  screen = false;
+  StartScreen = false;
+  loop();
   }
 }

@@ -3,8 +3,8 @@ public class Ball {
   private float y;
   private float speedX;
   private float speedY;
-  private float diameter;
-  private color c;
+  final private float diameter;
+  final private color c;
   
   // Constructor method
   public Ball(float tempX, float tempY, float tempDiameter) {
@@ -45,7 +45,7 @@ public class Ball {
   }
 }
 
-void screenChecker () {
+public void screenChecker () {
 if (width<height) { 
 println ("Please change to landscape mode to play game");
 exit();
