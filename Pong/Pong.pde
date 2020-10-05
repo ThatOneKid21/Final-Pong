@@ -7,6 +7,7 @@ public boolean cheat = false;
 public boolean Menu = false;
 public boolean screen = true;
 public boolean DarkMode = false;
+public boolean OnePlayer = false;
 public PFont f;
 
 public void setup() {
@@ -16,7 +17,7 @@ public void setup() {
   ball.speedY = random(-3,3);
   paddleLeft = new Paddle(15, height/2, 30,200);
   paddleRight = new Paddle(width-15, height/2, 30,200);
-  printArray(PFont.list());
+  //printArray(PFont.list());
   f = createFont("OCR A Extended", 285);
   textFont(f);
 }
@@ -24,6 +25,11 @@ public void setup() {
 
 public void draw() {
   background(0);
+  OnePlayer();
+  DarkMode();
+  paddleLeft.DarkMode();
+  paddleRight.DarkMode();
+  ball.DarkMode();
   ball.move();
   ball.display();
   ball_movment();
@@ -63,6 +69,20 @@ public void keyPressed () {
   Reset();
   }
   paused();
+    if(key == 'd'){
+  DarkMode = true;  
+  }
+  
+  if(key == 'z'){
+  DarkMode = false;
+  }
+  
+  if(key == '1') {
+    OnePlayer = true;
+  }
+    if(key == '2') {
+    OnePlayer = false;
+  }
 }
 
 public void keyReleased(){

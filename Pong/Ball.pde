@@ -26,10 +26,18 @@ public class Ball {
   }
   
   private void display() {
+    if(DarkMode == false) {
     fill(c);
     ellipse(x,y,diameter,diameter);
+    }
   }
-
+  
+  void DarkMode(){
+    if (DarkMode == true) {
+    fill(0);
+    ellipse(x,y,diameter,diameter);
+    }
+  }
   //functions to help with collision detection
   float left(){
     return x-diameter/2;

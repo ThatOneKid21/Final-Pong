@@ -6,7 +6,7 @@ public class Paddle{
  final private float h;
  private float speedY;
  private float speedX;
- final private color c;
+ public color c;
   
   Paddle(float tempX, float tempY, float tempW, float tempH){
     x = tempX;
@@ -23,9 +23,18 @@ public class Paddle{
     x += speedX;
   }
 
-   private void display(){
+    void display(){
+      if(DarkMode == false){
     fill(c);
     rect(x-w/2,y-h/2,w,h);
+      }
+  } 
+  
+    void DarkMode(){
+      if (DarkMode == true) {
+    fill(0);
+    rect(x-w/2,y-h/2,w,h);
+      }
   } 
   
   float left(){

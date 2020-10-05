@@ -8,6 +8,9 @@ void scoreboard() {
   textAlign(CENTER);
   text(scoreRight, width/2+30, 30);
   text(scoreLeft, width/2-30, 30);
+  if(DarkMode == true) {
+  fill(225);
+  }
   if (ball.right() > width) {
     scoreLeft = scoreLeft + 1;
     ball.x = width/2;
@@ -50,11 +53,13 @@ if (StartScreen == true) {
   fill(random(225), random(225), random(225));
   text("Welcome to pong", 0, 0, 1366, 768);
   textSize(20);
-  text("(p) to pause, (ENTER) to resume, (r) to reset, (c) for the person with the mouse ;)", width*1/3, height*1/2, width*1/3, 200);
+  text("(p) to pause, (ENTER) to resume, (1) for OnePlayer and (2) for TwoPlayer, (d) for DarkMode and (z) to turn off, (r) to reset, (c) for the person with the mouse ;) and (v) to turn off (Click to Continue)", width*1/3, height*1/2, width*1/3, 220);
   noLoop();
   }
 }
 
 void DarkMode() {
-
+if(DarkMode == true) {
+background(225);
+  }
 }
