@@ -11,7 +11,6 @@ public boolean OnePlayer = false;
 public PFont f;
 
 public void setup() {
-  fullScreen();
   ball = new Ball(width/2, height/2, 50);
   ball.speedX = 13;
   ball.speedY = random(-3,3);
@@ -24,7 +23,9 @@ public void setup() {
 
 
 public void draw() {
-  background(0);
+  fill(0, 20);
+  noStroke();
+  rect(0, 0, width, height);
   OnePlayer();
   DarkMode();
   paddleLeft.DarkMode();
