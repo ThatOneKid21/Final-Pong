@@ -28,7 +28,7 @@ void scoreboard() {
   textAlign(CENTER, CENTER);
   textFont(f, 55);
   fill(random(225), random(225), random(225));
-  text("Player2 Wins (Press R to play again)", 0, 0, 1366, 768);
+  text("Player2 Wins", 0, 0, 1366, 768);
   textSize(20);
   text("Press R to Play Again", width*1/3, height*1/2, width*1/3, 220);
   noLoop();
